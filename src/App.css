@@ -1,38 +1,169 @@
 .App {
-  text-align: center;
+    height: 100vh;
+    width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    height: 100%;
+    width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fileExplorer_container {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.fileExp {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+.navpane {
+    max-width: 30%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background-color: #64686d;
+    border-radius: 15px 0 0 15px;
+    padding: 60px 7px 10px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav_folder_group {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.nav_folder_group .nav_folder_name {
+    color: gray;
+}
+
+.nav_folder_links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: #fff;
+    /* padding-left: 5px; */
+    flex-wrap: wrap;
+}
+
+.nav_folder_links li {
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 8px;
+    width: 100%;
+    min-height: 35px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin-bottom: 7px;
+}
+
+.nav_active {
+    border: 1px solid white;
+    background-color: #7d8084;
+}
+
+.nav_folder_links li:hover {
+    background-color: #7d8084;
+}
+
+.fileExp_items_cont {
+    color: #fff;
+    max-width: 70%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(36, 34, 34);
+    border-radius: 0 15px 15px 0;
+}
+
+.file_items {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 60px 7px 10px 10px;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.file_cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 25px
+}
+
+.f_card {
+    display: flex;
+    flex-direction: column;
+    min-width: 80px;
+    max-width: 80px;
+    padding: 3px;
+    justify-content: center;
+    height: auto;
+    min-height: 80px;
+    height: fit-content;
+}
+
+.f_card svg {
+    max-width: 70px;
+    max-height: 70px;
+    width: 100%;
+    height: 100%;
+}
+
+.f_card:hover {
+    outline: none;
+    /* border: 1px solid whitesmoke;
+    border-radius: 8px; */
+}
+
+.menu {
+    width: 120px;
+    box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: none;
+    background-color: #2f2e2e;
+}
+
+.menu .menu-options {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.menu-options .menu-option {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+}
+
+.menu-options .menu-option:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width:550px) {
+    .nav_folder_links li {
+        flex-direction: column;
+        row-gap: 8px;
+        margin-bottom: 20px;
+    }
 }
