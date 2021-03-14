@@ -23,3 +23,17 @@ function getNewFolderObj(count) {
   };
   return temp;
 }
+
+export function deleteItem(delItem, data) {
+  let child = structure[0].root?.find((item) => {
+    return item.groupName === data.group;
+  });
+  let folder = child.children?.find((item) => {
+    return item.folder === data.folderName;
+  });
+  let finalRes = folder.children?.filter(
+    (item) => item.folderName !== delItem.folderName
+  );
+  folder.children = finalRes;
+  return folder.children;
+}
