@@ -12,9 +12,11 @@ function NavPane({ handleSetFiles, handleNavFolder }) {
     setInitial();
   }, [STRUCTURE]);
   const handleNavFolderClick = (e, data) => {
+    //e.preventDefault();
     console.log("nav clicked", e.target);
     document.querySelector(".nav_active")?.classList?.remove("nav_active");
-    e.target.className = "nav_active";
+    //e.target.className = "nav_active";
+    e.target.setAttribute("class", "nav_active");
     handleNavFolder({ group: data.group, folderName: data.folder });
     handleSetFiles(data.children);
   };

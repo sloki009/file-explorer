@@ -130,6 +130,10 @@
     height: 100%;
 }
 
+.nav_folder_links>li svg {
+    pointer-events: none;
+}
+
 .f_card:hover {
     outline: none;
     /* border: 1px solid whitesmoke;
